@@ -13,10 +13,6 @@
 ^{:nextjournal.clerk/visibility {:code :hide :result :show}}
 (clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/logo.png' alt='logo' style='width: 100%; text-align: center;'/>")
 
-;; You can find solution with detailed explanations below.
-;;
-;; Please enjoy!
-;;
 ;; Solutions are authored by [@DrearyLisper](https://x.com/drearylisper)
 ;;
 ;; Don't forget to star my [Project on GitHub](https://github.com/DrearyLisper/aoc-2023)!
