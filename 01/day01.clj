@@ -130,9 +130,11 @@
 ;; Here is an answer for the second part!
 (solve-with "01/input.txt" part02)
 
+^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn solve [filename]
   (println (solve-with filename part01))
   (println (solve-with filename part02)))
 
+^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn run [_]
   (solve "01/input.txt"))
