@@ -40,7 +40,7 @@ jobs:
 
       - name: 🏗 Clerk Build
         run: |
-          clojure -X:nextjournal/clerk
+          NODE_PATH=$(yarn global dir)/node_modules clojure -X:nextjournal/clerk
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
