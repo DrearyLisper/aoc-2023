@@ -40,7 +40,7 @@ jobs:
 
       - name: 🏗 Clerk Build
         run: |
-          clojure -M:nextjournal/clerk
+          clojure -X:nextjournal/clerk
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
