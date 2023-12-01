@@ -123,7 +123,7 @@
     ["nine"]  9
     :else (Integer/parseInt s)))
 
-(replace-string-with-digit "one")
+(map replace-string-with-digit '("one" "four" "6" "nine"))
 
 ;; And then we can combine all helper functions to get a solution for the second part
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
