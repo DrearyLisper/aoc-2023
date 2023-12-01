@@ -11,7 +11,7 @@
 ;;
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :show}}
-(clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/logo.png' alt='logo' style='width:600px; text-align: center;'/>")
+(clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/logo.png' alt='logo' style='width: 100%; text-align: center;'/>")
 
 ;; You can find solution with detailed explanations below.
 ;;
