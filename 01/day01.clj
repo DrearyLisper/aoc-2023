@@ -4,13 +4,10 @@
             [clojure.java.io :as io]
             [clojure.core.match :refer [match]]))
 
-^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
-(comment
-  (clerk/serve! {:watch-paths ["01"]}))
+;; ## Day 01: Trebuchet?! 
 
-;; # Day 01: Trebuchet?! 
-
-;; ## Part 01
+;; ### Part 01
+;; #### Problem statement
 
 ;; You try to ask why they can't just use a [weather machine](https://adventofcode.com/2015/day/1) ("not powerful enough") and where they're even sending you ("the sky") and why your map looks mostly blank ("you sure ask a lot of questions") and hang on did you just say the sky ("of course, where do you think snow comes from") when you realize that the Elves are already loading you into a [trebuchet](https://en.wikipedia.org/wiki/Trebuchet) ("please hold still, we need to strap you in").
 
@@ -30,6 +27,8 @@
 ;; In this example, the calibration values of these four lines are 12, 38, 15, and 77. Adding these together produces **142**.
 
 ;; Consider your entire calibration document. **What is the sum of all of the calibration values?**
+
+;; #### Solution
 
 ;; Helper function which we will be using for testing solutions on different input files.
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
@@ -67,7 +66,9 @@
 ;; Answer for the first part!
 (solve-with "01/input.txt" part01)
 
-;; ## Part 02
+;; ### Part 02
+
+;; #### Problem statement
 
 ;; Your calculation isn't quite right. It looks like some of the digits are actually **spelled out with letters**: one, two, three, four, five, six, seven, eight, and nine also count as valid "digits".
 
@@ -86,6 +87,9 @@
 ;; In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Adding these together produces **281**.
 
 ;; **What is the sum of all of the calibration values?**
+
+
+;; #### Solution
 
 ;; To solve second part we need extracting overlapping 
 ;; string that may define numbers as well.
