@@ -47,9 +47,9 @@
 
 ;; So the goal of the first part is to check whether games are possible given the constraints to number of cubes that we can pull out of the bag.
 ;; The game only will make sense if we have:
-;; - Less than 12 number of red cubes
-;; - Less than 13 number of green cubes
-;; - Less than 14 number of blue cubes
+;; - Less or equal than 12 number of red cubes
+;; - Less or equal than 13 number of green cubes
+;; - Less or equal than 14 number of blue cubes
 
 ;; Let's breakdown solution into smaller parts.
 ;; We will need to be able to:
