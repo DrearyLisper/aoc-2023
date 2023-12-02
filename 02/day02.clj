@@ -182,6 +182,8 @@
 ^{:nextjournal.clerk/visibility {:code :hide :result :show}}
 (clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/second_part_02.png' alt='first_part' style='width: 100%; text-align: center;'/>")
 
+;; If you liked my solution please star me on [GitHub](https://github.com/DrearyLisper/aoc-2023)!
+
 ^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn solve [filename]
   (println (solve-with filename part01))

@@ -66,6 +66,9 @@
 ;; Answer for the first part!
 (solve-with "01/input.txt" part01)
 
+^{:nextjournal.clerk/visibility {:code :hide :result :show}}
+(clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/first_part.png' alt='first_part' style='width: 100%; text-align: center;'/>")
+
 ;; ### Part 02
 
 ;; #### Problem statement
@@ -140,6 +143,8 @@
 
 ;; Here is an answer for the second part!
 (solve-with "01/input.txt" part02)
+
+;; If you liked my solution please star me on [GitHub](https://github.com/DrearyLisper/aoc-2023)!
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn solve [filename]
