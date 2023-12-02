@@ -89,19 +89,19 @@
 ;; - **Id of a game** (as we need to sum it up) as a first element
 ;; - **List of parsed hands** as a second element
 
-;; Last function that we need to solve first part will be deciding whether the game possible.
-;; It will be iterating through all hands and compare the numbers to constant vector *[12 13 14]*.
-;; If game is possible it will return id of a game otherwise it will return zero.
+;; Last function that we need to solve first part will be deciding whether the whole game is possible.
+;; It will be iterating through all hands and comparing the numbers to constant vector **[12 13 14]**.
+;; If game is possible it will be returning id of a game, otherwise it will be returning zero.
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn check-game-part01 [game]
   (let [[game-id cubes] game
         compare-game (fn compare-game [a b]
                        (every? identity (map <= a b)))
-        bad-games (->> cubes
+        bad-hands (->> cubes
                        (map #(compare-game % (vector 12 13 14)))
                        (filter #(not %))
                        (count))]
-    (if (> bad-games 0) 0 game-id)))
+    (if (> bad-hands 0) 0 game-id)))
 
 (check-game-part01
  (parse-line "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"))
@@ -151,11 +151,11 @@
 
 ;; #### Solution
 
-;; Luckuly for us we don't need to change much of a logic that we created in first part.
-;; The only thing which is differs is the way how we aggregate hands.
+;; Luckuly for us we don't need to change much of a logic that we created in the first part.
+;; The only thing which differs is the way how we aggregate the hands.
 
 ;; Instead of comparing with a constant hand we will be taking component-wise maximum of the hands,
-;; and the multiplying them to each other.
+;; and then multiplying them to each other.
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn check-game-part02 [game]
   (let [[_ cubes] game]
