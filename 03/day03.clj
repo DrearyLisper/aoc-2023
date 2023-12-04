@@ -242,7 +242,7 @@
 
 (solve-with "03/input.txt" part02)
 
-;; Which gets up a second star for the day!
+;; Which gets us a second star for the day!
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :show}}
 (clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/second_part_03.jpeg' alt='first_part' style='width: 100%; text-align: center;'/>")

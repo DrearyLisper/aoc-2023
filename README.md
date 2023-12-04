@@ -33,3 +33,13 @@ aoc-2023$ clj -X day03/run
 539713
 84159075
 ```
+
+## Day 04: Scratchcards
+
+[Full Solution](https://drearylisper.github.io/aoc-2023/04/day04/)
+
+``` clojure
+aoc-2023$ clj -X day04/run
+22674
+5747443
+```
