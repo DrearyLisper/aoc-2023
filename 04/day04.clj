@@ -104,7 +104,7 @@
        (map count)
        (filter #(> % 0))
        (map #(- % 1))
-       ;; Comping power of 2 as problem asks us
+       ;; Computing power of 2 as problem asks us
        (map pow2)
        ;; Summing everything up
        (reduce +)))
