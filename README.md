@@ -18,9 +18,18 @@ aoc-2023$ clj -X day01/run
 
 [Full Solution](https://drearylisper.github.io/aoc-2023/02/day02/)
 
-
 ``` clojure
-$ clj -X day02/run
+aoc-2023$ clj -X day02/run
 2617
 59795
+```
+
+## Day 03: Gear Ratios
+
+[Full Solution](https://drearylisper.github.io/aoc-2023/03/day03/)
+
+``` clojure
+aoc-2023$ clj -X day03/run
+539713
+84159075
 ```

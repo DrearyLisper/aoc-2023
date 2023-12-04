@@ -1,4 +1,4 @@
-{:paths ["01", "02"]
+{:paths ["01", "02", "03"]
  :deps
  {clojure.java-time/clojure.java-time {:mvn/version "1.1.0"}
   io.github.nextjournal/clerk {:mvn/version "0.15.957"}
@@ -7,4 +7,4 @@
                                :jvm-opts ["-Dclojure.main.report=stdout"]
                                :exec-args {:index "index.clj"
                                            :compile-css true
-                                           :paths ["01/day01.clj", "02/day02.clj"]}}}}
+                                           :paths ["01/day01.clj", "02/day02.clj", "03/day03.clj"]}}}}
