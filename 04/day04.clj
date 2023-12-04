@@ -147,9 +147,9 @@
 ;; - Your fourteen instances of card 5 (one original and thirteen copies) have no matching numbers and win no more cards.
 ;; - Your one instance of card 6 (one original) has no matching numbers and wins no more cards.
 
-;; Once all of the originals and copies have been processed, you end up with 1 instance of card 1, 2 instances of card 2, 4 instances of card 3, 8 instances of card 4, 14 instances of card 5, and 1 instance of card 6. In total, this example pile of scratchcards causes you to ultimately have 30 scratchcards!
+;; Once all of the originals and copies have been processed, you end up with **1** instance of card 1, **2** instances of card 2, **4** instances of card 3, **8** instances of card 4, **14** instances of card 5, and **1** instance of card 6. In total, this example pile of scratchcards causes you to ultimately have **30** scratchcards!
 
-;; Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?
+;; Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, **how many total scratchcards do you end up with?**
 
 ;; #### Solution
 
