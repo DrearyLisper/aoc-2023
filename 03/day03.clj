@@ -1,7 +1,6 @@
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (ns day03
   (:require [nextjournal.clerk :as clerk]
-            [clojure.core.match :refer [match]]
             [clojure.string :as str]
             [clojure.java.io :as io]))
 
@@ -48,16 +47,16 @@
 
 ;; #### Solution
 
-;; So, in this problem we need add up all numbers that have any kind of symbols near by.
+;; So, in this problem we need to add up all numbers that have any kind of symbols near by on 2D map. We consider symbol being near if it's reachable horizontally, vertically or diagonally from any part of number.
 
-;; I decomposed this problem into smaller once
+;; I decided to decompose this problem into few smaller subtasks:
 ;; - Forming map with indexed cells
 ;; - Finding all the symbols in the map
 ;; - Finding all unique numbers near symbols
 
-;; We will use this small type **Cell** to keep everything we need to now about the each cell in the map.
+;; We will use this small type **Cell** below to keep everything we need to know about  each cell in the map.
 
-;; I haven't figure outed user defined types in **Clojure** yet, but I think it will do a required job.
+;; I haven't fully figure outed user defined types in **Clojure** yet, but I think it will do a required job.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (deftype Cell [x y v]
@@ -95,11 +94,12 @@
               (map #(apply parse-row %))))))
 (parse-lines [[0 "123*.321"]])
 
-;; The result will be a matrix with parsed cells.
+;; As you can see the result will be a matrix with parsed cells.
 
 ;; Next function will be extracting all interesting symbols.
 
-;; We can control additional filters we want to apply using *predicate* parameter. It will be clear in the future why we need it.
+;; We can control additional filters that we want to apply using *predicate* parameter. It will be clear in the future why we need it.
+
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn filter-symbols [rows predicate]
   (->> rows
@@ -116,7 +116,7 @@
 (defn get-cell [rows x y]
   (get (get rows x) y))
 
-;; We can provide coordinate of any part of the number, as we trace back to its start always.
+;; For convinience we can provide coordinate of any part of the number, that will be very usefull as we will see below.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn extract-number [rows x y]
@@ -141,7 +141,7 @@
 (extract-number
  (parse-lines [[0 "123*.321"]]) 0 1)
 
-;; We also will be adding coordinates of found number to help us distinguishing the same numbers placed in different locations.
+;; We also will be adding coordinates of found number into result to help us distinguishing the numbers with same value but placed in different locations.
 
 ;; Then we can use this function to peek around the coordinate and gather everything that looks like number.
 
@@ -179,7 +179,7 @@
 
 (solve-with "03/input.txt" part01)
 
-;; And this get us a first start in the day.
+;; And this get us a first star in the day.
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :show}}
 (clerk/html "<img src='https://raw.githubusercontent.com/DrearyLisper/aoc-2023/master/images/first_part.png' alt='first_part' style='width: 100%; text-align: center;'/>")
@@ -218,7 +218,7 @@
 
 ;; #### Solution
 
-;; So the change is that we need to consider only * symbol, and multiple the numbers before finally summing them up.
+;; So the change is that we need to consider only ** * ** symbol, and multiple the numbers per symbol before finally summing them up.
 
 ;; Luckily our earlier implemented functions are reach enough to only modify a final function.
 
