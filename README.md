@@ -43,3 +43,13 @@ aoc-2023$ clj -X day04/run
 22674
 5747443
 ```
+
+## Day 05: If You Give A Seed A Fertilizer
+
+[Full Solution](https://drearylisper.github.io/aoc-2023/05/day05/)
+
+``` clojure
+aoc-2023$ clojure -X day05/run
+88151870N
+2008785N
+```
