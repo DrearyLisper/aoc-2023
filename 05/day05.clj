@@ -26,7 +26,7 @@
 
 ;; We will parse each map into a function which then could be combined into one function mapping the value from beginning to the end.
 
-;; But first let's first implement parsing for the seed values.
+;; But first let's implement parsing for the seed values.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn parse-seeds [line]
@@ -34,7 +34,7 @@
     (map #(bigint %) (str/split (str/trim seeds-str) #" "))))
 (parse-seeds "seeds: 79 14 55 13")
 
-;; It will be returning just a vector of values. N suffix means that those are big integers, it will be required to handle large ints from the input.txt 
+;; It will be returning just a vector of values. **N** suffix means that those are big integers, it will be required to handle large ints from the input.txt 
 
 ;; Parsing of the maps will be a bit more tricky. I will add comments to important parts of this big function.
 
@@ -118,11 +118,10 @@
 
 ;; The change in second part is quite drastic!
 
-;; Instead of doing mapping one seed at the time we need to operate with ranges of seeds. Theoretically we just could run solution from the first part for every seed value in all ranges in the second part, but if you take a look to your input.txt you will see that those regions contain billions of values.
-
+;; Instead of doing mapping for one seed at the time we need to operate with ranges of seeds. Theoretically we just could run solution from the first part for every seed value in all ranges in the second part, but if you take a look to your input.txt you will see that those regions contain billions of values.
 ;; Making this path unfeasible.
 
-;; So instead we need to change our mapping unit from one value to a range of values.
+;; So instead we need to change our mapping unit from one value to a range of values. Let's see how it parsing of seeds changed given new information.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn parse-seeds-range [line]
@@ -137,7 +136,7 @@
 
 ;; Now instead of single values we have two ranges of values defined by their left and right ends.
 
-;; The function to parse and create maps will also become a bit more trickier than before. I will leave comments inside of the code to explain its details.
+;; The function to parse and create maps will become even more trickier than before. I will leave comments inside of the code to explain its details.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn parse-map-range [line]
