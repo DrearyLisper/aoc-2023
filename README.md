@@ -53,3 +53,13 @@ aoc-2023$ clojure -X day05/run
 88151870N
 2008785N
 ```
+
+## Day 06: Wait For It
+
+[Full Solution](https://drearylisper.github.io/aoc-2023/06/day06/)
+
+``` clojure
+aoc-2023$ clojure -X day06/run
+4403592
+38017587
+```

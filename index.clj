@@ -4,7 +4,7 @@
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (comment
-  (clerk/serve! {:paths [".", "01", "02", "03", "04", "05"] :watch-paths ["."] :host "0.0.0.0" :port 7778}))
+  (clerk/serve! {:paths [".", "01", "02", "03", "04", "05", "06"] :watch-paths ["."] :host "0.0.0.0" :port 7778}))
 
 ;; # 🎄 Advent of Code 2023 in Clojure
 ;;
@@ -50,4 +50,11 @@
 ;; aoc-2023$ clojure -X day05/run
 ;; 88151870N
 ;; 2008785N
+;; ```
+
+;; ## [Day 06: Wait For It](06/day06)
+;; ``` clojure
+;; aoc-2023$ clojure -X day06/run
+;; 4403592
+;; 38017587
 ;; ```
