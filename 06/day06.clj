@@ -53,7 +53,7 @@
        (map #(* % (- t %)))))
 (variants 7)
 
-;; We then can use everything together to sketch a solutino.
+;; We then can use everything together to sketch a solution.
 
 ^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn part01 [lines]
