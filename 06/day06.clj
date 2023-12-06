@@ -55,6 +55,7 @@
 
 ;; We then can use everything together to sketch a solutino.
 
+^{:nextjournal.clerk/visibility {:code :show :result :hide}}
 (defn part01 [lines]
   (->> (parse-lines-part01 lines)
        ;; Zip numbers together
